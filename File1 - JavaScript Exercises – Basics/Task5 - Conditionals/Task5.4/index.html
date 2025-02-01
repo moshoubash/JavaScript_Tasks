@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Remove Element from Array</h1>
+    <div class="form-group">
+        <label for="arrayInput">Enter Array (comma-separated):</label>
+        <input type="text" id="arrayInput" placeholder="Coding, Academy, By, Orange">
+    </div>
+    <div class="form-group">
+        <label for="elementInput">Element to Remove:</label>
+        <input type="text" id="elementInput" placeholder="e.g., By">
+    </div>
+    <button onclick="removeElementFromArray()">Remove Element</button>
+    <div id="result"></div>
+
+    <script>
+        function removeElementFromArray() {
+            const arrayInput = document.getElementById('arrayInput').value.split(',').map(item => item.trim());
+            const elementToRemove = document.getElementById('elementInput').value.trim();
+            const filteredArray = arrayInput.filter(item => item !== elementToRemove);
+            document.getElementById('result').innerText = `Result: [${filteredArray.join(', ')}]`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3. Resolve Exercise 1 so that one loop prints out even numbers and the second prints out the odd ones.</h1>
+    <p>Use 1 for loop for even and 1 while loop for odd.</p>
+    <h2><mark>Open the console to see the result</mark></h2>
+
+    <script>
+        console.log("%c For loop", "color: red; font-weight: bold;");
+        for(let i = 0; i <= 50; i++)
+            if(i % 2 === 0)    
+                console.log(i);
+
+        console.log("%c While loop", "color: red; font-weight: bold;");
+        let j = 0;
+        while(j < 50){
+            if(j % 2 !== 0)    
+                console.log(j);
+            j++;
+        }
+    </script>
+</body>
+</html>

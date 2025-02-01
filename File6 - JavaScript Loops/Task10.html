@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2D Array Elements</h1>
+    <h2>I solved it using Nested loop</h2>
+    <p>array : </p>
+    <p>
+        <mark>
+            let array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        </mark>
+    </p>
+    <script>
+        let array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        let output = "";
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                output += array[i][j] + " ";
+            }
+        }
+        document.write(output);
+    </script>
+</body>
+</html>

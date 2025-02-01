@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prevent Changes to an Object using Object.freeze()</h1>
+    <p>
+        Object : 
+    </p>
+    <p>
+        <mark>
+            const person = { name: "Adam", age: 25 };
+        </mark>
+    </p>
+    <script>
+        const person = { name: "Adam", age: 25 };
+
+        Object.freeze(person);
+
+        person.name = "Eve";
+        person.age = 30;
+        console.log(person); // { name: "Adam", age: 25 }
+
+        person.gender = "male";
+        console.log(person); // { name: "Adam", age: 25 }
+
+        document.write(`<pre>${JSON.stringify(person, null, 2)}</pre>`);
+    </script>
+</body>
+</html>

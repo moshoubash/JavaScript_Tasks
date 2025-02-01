@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Array into Evens and Odds</title>
+</head>
+<body>
+    <h1>Sort Array into Evens and Odds</h1>
+    <button onclick="sortArray()">Sort Array</button>
+    <div id="evensResult"></div>
+    <div id="oddsResult"></div>
+
+    <script>
+        function sortArray() {
+            const array = [7, 23, 18, 9, -13, 38, -10, 12, 0, 124];
+            const evens = [];
+            const odds = [];
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 === 0) {
+                    evens.push(array[i]);
+                } else {
+                    odds.push(array[i]);
+                }
+            }
+
+            document.getElementById('evensResult').innerText = 'Even numbers: ' + evens.join(', ');
+            document.getElementById('oddsResult').innerText = 'Odd numbers: ' + odds.join(', ');
+        }
+    </script>
+</body>
+</html>

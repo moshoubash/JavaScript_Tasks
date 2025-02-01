@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorted Property Names</title>
+</head>
+<body>
+    <h1>Sorted Property Names</h1>
+    <div>
+        <label for="objectInput">Enter Object (as JSON):</label>
+        <input type="text" id="objectInput" placeholder='{"name": "John", "age": 30, "city": "New York"}'>
+        <button onclick="sortAndDisplayPropertyNames()">Get Sorted Property Names</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function getSortedPropertyNames(obj) {
+            return Object.keys(obj).sort();
+        }
+
+        function sortAndDisplayPropertyNames() {
+            const objectInput = document.getElementById('objectInput').value;
+            let obj = JSON.parse(objectInput);
+            const sortedPropertyNames = getSortedPropertyNames(obj);
+            document.getElementById('result').innerText = sortedPropertyNames.join(', ');
+        }
+    </script>
+</body>
+</html>

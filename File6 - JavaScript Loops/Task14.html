@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform Heros Array</title>
+</head>
+<body>
+    <h1>Transform Heros Array</h1>
+    <p>Object : </p>
+    <p>
+<pre>
+const heros = [
+    {name: 'Iron Man', power: 'Tech'},
+    {name: 'Spider-Man', power: 'Spider abilities'},
+    {name: 'Thor', power: 'Godly powers'},
+    {name: 'Hulk', power: 'Super strength'}
+];
+</pre>
+    </p>
+    <script>
+        const heros = [
+            {name: 'Iron Man', power: 'Tech'},
+            {name: 'Spider-Man', power: 'Spider abilities'},
+            {name: 'Thor', power: 'Godly powers'},
+            {name: 'Hulk', power: 'Super strength'}
+        ];
+
+        const newHeros = heros.map((hero, index) => ({
+            hero: hero.name,
+            power: hero.power,
+            id: index
+        }));
+
+        document.write("<pre>" + JSON.stringify(newHeros, null, 2   ) + "</pre>");
+    </script>
+</body>
+</html>

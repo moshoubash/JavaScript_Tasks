@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sum of Squared Numbers Divisible by 5</h1>
+    <p>Array : </p>
+    <p>
+        <mark>
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        </mark>
+    </p>
+    <script>
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        const sumSquaredDivisibleBy5 = numbers.reduce((sum, num) => {
+            if (num % 5 === 0) {
+                sum += num * num;
+            }
+            return sum;
+        }, 0);
+
+        console.log(sumSquaredDivisibleBy5);
+        document.write(`The sum of the squares of numbers divisible by 5 is ${sumSquaredDivisibleBy5}`);
+    </script>
+</body>
+</html>

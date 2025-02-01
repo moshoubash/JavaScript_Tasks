@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check if Input is a Number</h1>
+    <div class="form-group">
+        <label for="inputValue">Enter Input:</label>
+        <input type="text" id="inputValue" placeholder="Enter your input">
+    </div>
+    <button onclick="checkIfNumber()">Check</button>
+    <div id="result"></div>
+
+    <script>
+        function checkIfNumber() {
+            const input = document.getElementById('inputValue').value;
+            const isNumber = typeof Number(input) === 'number' && !isNaN(Number(input));
+            const resultMessage = isNumber ? "The input is a number." : "The input is not a number.";
+            document.getElementById('result').innerText = resultMessage;
+        }
+    </script>
+</body>
+</html>

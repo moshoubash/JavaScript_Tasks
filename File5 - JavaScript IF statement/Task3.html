@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Character Check</h1>
+    <form>
+        <label for="charInput">Enter a character:</label>
+        <input type="text" id="charInput" name="charInput" maxlength="1">
+        <button type="button" onclick="checkCharacter()">Check</button>
+    </form>
+    <p id="charMessage"></p>
+    <script>
+        function checkCharacter() {
+            let char = document.getElementById("charInput").value;
+            let isLetter = (char.length === 1) && ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z'));
+            let message = isLetter ? "It's a letter" : "It's not a letter";
+            document.getElementById("charMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>

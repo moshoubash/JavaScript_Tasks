@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+    <h1>Fibonacci Sequence</h1>
+    <form>
+        <label for="fibInput">Enter a number:</label>
+        <input type="number" id="fibInput" name="fibInput">
+        <button type="button" onclick="printFibonacci()">Print</button>
+    </form>
+    <p id="fibMessage"></p>
+    <script>
+        function printFibonacci() {
+            let n = parseInt(document.getElementById("fibInput").value);
+            let fib = [0, 1];
+            let i = 2;
+            while (true) {
+                let next = fib[i - 1] + fib[i - 2];
+                if (next > n) break;
+                fib.push(next);
+                i++;
+            }
+            document.getElementById("fibMessage").innerText = fib.join(" ");
+        }
+    </script>
+    </script>
+</body>
+</html>

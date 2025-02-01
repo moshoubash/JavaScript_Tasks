@@ -1,0 +1,44 @@
+*{
+    color: white;
+    text-decoration: none;
+}
+a{
+    color: white;
+    font-size: 1rem;
+}
+li{
+    font-size: 1rem;
+}
+body {
+    font-family: monospace;
+    background: rgb(10,9,4);
+    background: linear-gradient(75deg, rgba(10,9,4,1) 0%, rgba(19,47,201,1) 100%);
+    padding: 0 100px;
+}
+h1 {
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    margin-top: -10px;
+    opacity: 30%;
+}
+h2 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+ul {
+    padding-left: 0;
+    margin: 30px;
+}
+ul li {
+    margin-bottom: 10px;
+}
+ul li ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+ul li a:hover {
+    text-decoration: underline;
+}

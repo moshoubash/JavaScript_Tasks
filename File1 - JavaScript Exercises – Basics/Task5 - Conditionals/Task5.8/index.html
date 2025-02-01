@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Triangle Type</title>
+</head>
+<body>
+    <h1>Check Triangle Type</h1>
+    <div class="form-group">
+        <label for="side1">Enter First Side:</label>
+        <input type="number" id="side1" placeholder="Enter first side length">
+    </div>
+    <div class="form-group">
+        <label for="side2">Enter Second Side:</label>
+        <input type="number" id="side2" placeholder="Enter second side length">
+    </div>
+    <div class="form-group">
+        <label for="side3">Enter Third Side:</label>
+        <input type="number" id="side3" placeholder="Enter third side length">
+    </div>
+    <button onclick="checkTriangleType()">Check Triangle Type</button>
+    <div id="result"></div>
+
+    <script>
+        function checkTriangleType() {
+            const side1 = parseFloat(document.getElementById('side1').value);
+            const side2 = parseFloat(document.getElementById('side2').value);
+            const side3 = parseFloat(document.getElementById('side3').value);
+            let triangleType;
+
+            if (side1 === side2 && side2 === side3) {
+                triangleType = "Equilateral";
+            } else if (side1 === side2 || side1 === side3 || side2 === side3) {
+                triangleType = "Isosceles";
+            } else {
+                triangleType = "Scalene";
+            }
+
+            document.getElementById('result').innerText = `The triangle is ${triangleType}.`;
+        }
+    </script>
+</body>
+</html>

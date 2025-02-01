@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch Letters' Case</h1>
+    <div class="form-group">
+        <label for="textInput">Enter Text:</label>
+        <input type="text" id="textInput" placeholder="Enter your text">
+    </div>
+    <br>
+    <button onclick="switchCase()">Switch Case</button>
+    <div id="result"></div>
+
+    <script>
+        function switchCase() {
+            const input = document.getElementById('textInput').value;
+            const switched = input.split('').map(char => {
+                return char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
+            }).join('');
+            document.getElementById('result').innerText = switched;
+        }
+    </script>
+</body>
+</html>

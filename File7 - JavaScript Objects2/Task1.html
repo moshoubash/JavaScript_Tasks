@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get Object Properties using Object.keys()</h1>
+    <p>Object : </p>
+    <p>
+        <mark>
+            const person = { name: "Adam", age: 25, gender: "male" };
+        </mark>
+    </p>
+    <script>
+        const person = { name: "Adam", age: 25, gender: "male" };
+        const keys = Object.keys(person);
+        console.log(keys); 
+
+        document.write(`<pre>${JSON.stringify(keys, null, 2)}</pre>`);
+    </script>
+</body>
+</html>

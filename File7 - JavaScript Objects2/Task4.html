@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Merge Objects using Object.assign()</h1>
+    <p>
+        Object #1 : 
+    </p>
+    <p>
+        <mark>
+            const obj1 = { name: "Adam", age: 25 };
+        </mark>
+    </p>
+    <p>
+        <mark>
+            const obj2 = { gender: "male" };
+        </mark>
+    </p>
+    <script>
+        const obj1 = { name: "Adam", age: 25 };
+        const obj2 = { gender: "male" };
+
+        const mergedObj = Object.assign({}, obj1, obj2);
+        console.log(mergedObj); // { name: "Adam", age: 25, gender: "male" }
+
+        document.write(`<pre>${JSON.stringify(mergedObj, null, 2)}</pre>`);
+    </script>
+</body>
+</html>

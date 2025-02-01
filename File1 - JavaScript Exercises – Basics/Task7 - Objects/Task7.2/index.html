@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><mark>Open the console to see the result</mark></h2>
+    <h1>2. Create a JavaScript function that receives an object as a parameter and returns the number of properties in the object. Use the Object.keys() method to get an array of the object's properties and then use the length property of the array to get the number of properties</h1>
+    <p>the data in object : </p>
+    <p>
+        const sampleObject = { name: 'John', age: 30, city: 'New York' };
+    </p>
+    <script>
+        function getObjectProperties(obj) {
+            return Object.keys(obj);
+        }
+        
+        const sampleObject = { name: 'John', age: 30, city: 'New York' };
+        const properties = getObjectProperties(sampleObject);
+        console.log(properties.length);
+    </script>
+</body>
+</html>

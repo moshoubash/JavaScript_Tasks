@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><mark>Open the console to see the result</mark></p>
+    <h2>Before : </h2>
+    <p>[“Coding”, “Academy”, “By”, “Orange”]</p>
+    <h2>After : </h2>
+    <p id="paragraph"></p>
+    <script>
+        let arr = ["Coding", "Academy", "By", "Orange"];
+        const paragraph = document.getElementById("paragraph");
+
+        
+        console.log(["Welcome", "To"].concat(arr));
+        paragraph.innerHTML = `[${["Welcome", "To"].concat(arr)}]`;
+    </script>
+</body>
+</html>

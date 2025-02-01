@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sum Up to Root</h1>
+    <div>
+        <label for="numberInput">Enter a Number:</label>
+        <input type="number" id="numberInput" placeholder="8">
+        <button onclick="calculateSum()">Calculate Sum</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function addUp(n) {
+            let sum = 0;
+            for (let i = n; i >= 0; i--) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        function calculateSum() {
+            const numberInput = document.getElementById('numberInput').value;
+            const number = parseInt(numberInput);
+            const sum = addUp(number);
+            document.getElementById('result').innerText = `Sum up to ${number} is ${sum}`;
+        }
+    </script>
+</body>
+</html>

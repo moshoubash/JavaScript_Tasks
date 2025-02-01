@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScirpt Task #1.1</title>
+
+    <style>
+        input, button{
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 2rem;
+        }
+
+        h2{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cash flow ratio</h1>
+    <input id="number1" type="number" placeholder="cash">
+    <br>
+    <input id="number2" type="number" placeholder="current liabilities">
+    <br>
+    <button onclick="fn()">calculate</button>
+    <h2>Result : <input type="text" id="result" readonly></h2>
+
+    <script>
+        const result = document.getElementById("result");
+        const number1 = document.getElementById("number1");
+        const number2 = document.getElementById("number2");
+
+        function fn() {
+            result.value = parseInt(number1.value)/parseInt(number2.value);
+        }
+    </script>
+</body>
+</html>

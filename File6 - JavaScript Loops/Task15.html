@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filter Long Words</h1>
+    <p>Array : </p>
+    <p>
+        <mark>
+            const inputWords = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+        </mark>
+    </p>
+    <script>
+        function filterLongWords(inputWords) {
+            return inputWords.filter(word => word.length > 7);
+        }
+
+        const inputWords = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+        const output = filterLongWords(inputWords);
+
+        document.write(output);
+    </script>
+</body>
+</html>

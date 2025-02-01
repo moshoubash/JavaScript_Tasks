@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Meals</title>
+</head>
+<body>
+    <h1>Create Unique Meals</h1>
+    <div>
+        <label for="mealCount">Enter Number of Meals:</label>
+        <input type="number" id="mealCount" placeholder="Enter the number of meals">
+        <button onclick="generateMeals()">Generate Meals</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function createMeals(numberOfMeals) {
+            const proteins = ['chicken', 'pork', 'tofu', 'beef', 'fish', 'beans'];
+            const grains = ['rice', 'pasta', 'corn', 'potato', 'quinoa', 'crackers'];
+            const vegetables = ['peas', 'green beans', 'kale', 'edamame', 'broccoli', 'asparagus'];
+            const beverages = ['juice', 'milk', 'water', 'soy milk', 'soda', 'tea'];
+            const desserts = ['apple', 'banana', 'more kale', 'ice cream', 'chocolate', 'kiwi'];
+
+            const meals = [];
+
+            while (meals.length < numberOfMeals) {
+                const protein = proteins[Math.floor(Math.random() * proteins.length)];
+                const grain = grains[Math.floor(Math.random() * grains.length)];
+                const vegetable = vegetables[Math.floor(Math.random() * vegetables.length)];
+                const beverage = beverages[Math.floor(Math.random() * beverages.length)];
+                const dessert = desserts[Math.floor(Math.random() * desserts.length)];
+
+                const meal = `${protein}, ${grain}, ${vegetable}, ${beverage}, ${dessert}`;
+
+                if (!meals.includes(meal)) {
+                    meals.push(meal);
+                }
+
+                if (meals.length >= proteins.length * grains.length * vegetables.length * beverages.length * desserts.length) {
+                    break;
+                }
+            }
+
+            return meals;
+        }
+
+        function generateMeals() {
+            const mealCount = parseInt(document.getElementById('mealCount').value);
+            const meals = createMeals(mealCount);
+            document.getElementById('result').innerText = meals.join('\n');
+        }
+    </script>
+</body>
+</html>

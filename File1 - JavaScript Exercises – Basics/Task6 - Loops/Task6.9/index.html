@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loop Tasks</title>
+    </head>
+    <body>
+        <h1>Loop Tasks</h1>
+
+        <div>
+            <h2>Task A: Print numbers 0 - 20</h2>
+            <button onclick="printNumbers()">Print Numbers</button>
+            <div id="resultA"></div>
+        </div>
+
+        <div>
+            <h2>Task B: Print odd values from 3 - 29</h2>
+            <button onclick="printOddValues()">Print Odd Values</button>
+            <div id="resultB"></div>
+        </div>
+
+        <div>
+            <h2>Task C: Print even numbers 12 to -14</h2>
+            <button onclick="printEvenNumbers()">Print Even Numbers</button>
+            <div id="resultC"></div>
+        </div>
+
+        <div>
+            <h2>Task D: Print multiples of 3 from 50 to 20</h2>
+            <button onclick="printMultiplesOfThree()">Print Multiples of 3</button>
+            <div id="resultD"></div>
+        </div>
+
+        <script>
+            function printNumbers() {
+                let result = '';
+                for (let i = 0; i <= 20; i++) {
+                    result += i + '\n';
+                }
+                document.getElementById('resultA').innerText = result;
+            }
+
+            function printOddValues() {
+                let result = '';
+                for (let i = 3; i <= 29; i += 2) {
+                    result += i + '\n';
+                }
+                document.getElementById('resultB').innerText = result;
+            }
+
+            function printEvenNumbers() {
+                let result = '';
+                for (let i = 12; i >= -14; i -= 2) {
+                    result += i + '\n';
+                }
+                document.getElementById('resultC').innerText = result;
+            }
+
+            function printMultiplesOfThree() {
+                let result = '';
+                for (let i = 50; i >= 20; i--) {
+                    if (i % 3 === 0) {
+                        result += i + '\n';
+                    }
+                }
+                document.getElementById('resultD').innerText = result;
+            }
+        </script>
+    </body>
+</html>

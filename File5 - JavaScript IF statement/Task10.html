@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Valid Number Check</h1>
+    <form>
+        <label for="numInput">Enter a value:</label>
+        <input type="text" id="numInput" name="numInput">
+        <button type="button" onclick="checkNumber()">Check</button>
+    </form>
+    <p id="numMessage"></p>
+    <script>
+        function isValidNumber(value) {
+            return !isNaN(value);
+        }
+
+        function checkNumber() {
+            let num = document.getElementById("numInput").value;
+            let message = isValidNumber(num) ? `"${num}" is a valid number` : `"${num}" is not a number`;
+            document.getElementById("numMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>

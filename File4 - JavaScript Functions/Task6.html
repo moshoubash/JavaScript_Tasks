@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Statistics</h1>
+    <div>
+        <label for="arrayInput">Enter Numbers (comma separated):</label>
+        <input type="text" id="arrayInput" placeholder="7, 13, 3, 77, 100" value="7, 13, 3, 77, 100">
+        <button onclick="calculateStatistics()">Calculate Statistics</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function minMaxLengthAverage(array) {
+            let min = array[0];
+            let max = array[0];
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < min) {
+                    min = array[i];
+                }
+                if (array[i] > max) {
+                    max = array[i];
+                }
+                sum += array[i];
+            }
+            const average = sum / array.length;
+            return [min, max, array.length, average];
+        }
+
+        function calculateStatistics() {
+            const arrayInput = document.getElementById('arrayInput').value;
+            const numberArray = arrayInput.split(',').map(Number);
+            const statistics = minMaxLengthAverage(numberArray);
+            document.getElementById('result').innerText = `Min: ${statistics[0]}, Max: ${statistics[1]}, Length: ${statistics[2]}, Average: ${statistics[3]} \nArray : [${minMaxLengthAverage(numberArray)}]`;
+        }
+    </script>
+</body>
+</html>

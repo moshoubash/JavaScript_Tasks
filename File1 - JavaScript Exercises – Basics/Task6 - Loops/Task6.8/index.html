@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Character Occurrences</title>
+</head>
+<body>
+    <h1>Count Character Occurrences</h1>
+    <div class="form-group">
+        <label for="stringInput">Enter String:</label>
+        <input type="text" id="stringInput" placeholder="Enter your string">
+    </div>
+    <div class="form-group">
+        <label for="charInput">Enter Character:</label>
+        <input type="text" id="charInput" maxlength="1" placeholder="Enter character">
+    </div>
+    <button onclick="countOccurrences()">Count</button>
+    <div id="result"></div>
+
+    <script>
+        function countCharacterOccurrences(str, char) {
+            const lowerStr = str.toLowerCase();
+            const lowerChar = char.toLowerCase();
+            let count = 0;
+            
+            for (let i = 0; i < lowerStr.length; i++) {
+                if (lowerStr[i] === lowerChar) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function countOccurrences() {
+            const string = document.getElementById('stringInput').value;
+            const char = document.getElementById('charInput').value;
+            const result = countCharacterOccurrences(string, char);
+            document.getElementById('result').innerText = `Occurrences: ${result}`;
+        }
+    </script>
+</body>
+</html>

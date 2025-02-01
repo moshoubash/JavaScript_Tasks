@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1. Write a script to print out all even numbers between 1 and 50, twice.</h1>
+    <p>Use 1 for loop and 1 while loop.</p>
+    <h2><mark>Open the console to see the result</mark></h2>
+
+    <script>
+        console.log("%c For loop", "color: red; font-weight: bold;");
+        for(let i = 0; i <= 50; i++)
+            if(i % 2 === 0)    
+                console.log(i);
+
+        console.log("%c While loop", "color: red; font-weight: bold;");
+        let j = 0;
+        while(j < 50){
+            if(j % 2 === 0)    
+                console.log(j);
+            j++;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiple of 3 Check</h1>
+    <form>
+        <label for="input">Enter a number:</label>
+        <input type="number" id="input" name="input">
+        <button type="button" onclick="checkMultipleOf3()">Check</button>
+    </form>
+    <p id="multipleMessage"></p>
+    <script>
+        function checkMultipleOf3() {
+            let z = document.getElementById("input").value;
+            let message = (z % 3 === 0) ? `${z} is a multiple of 3` : `${z} is not a multiple of 3`;
+            document.getElementById("multipleMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>

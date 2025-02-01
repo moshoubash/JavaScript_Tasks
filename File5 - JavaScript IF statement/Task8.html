@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Working Age Check</h1>
+    <form>
+        <label for="ageInput">Enter your age:</label>
+        <input type="number" id="ageInput" name="ageInput">
+        <button type="button" onclick="checkWorkingAge()">Check</button>
+    </form>
+    <p id="ageMessage"></p>
+    <script>
+        function checkWorkingAge() {
+            let age = document.getElementById("ageInput").value;
+            let message = (age >= 18 && age <= 65) ? "You are of working age" : "You are not of working age";
+            document.getElementById("ageMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>

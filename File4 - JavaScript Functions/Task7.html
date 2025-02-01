@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Word Count</h1>
+    <div>
+        <label for="stringInput">Enter a Sentence:</label>
+        <input type="text" id="stringInput" placeholder="hello from CodingAcademy!" value="hello from CodingAcademy!">
+        <button onclick="countAndDisplayWords()">Count Words</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function countWords(str) {
+            const words = str.split(' ');
+            return words.length;
+        }
+
+        function countAndDisplayWords() {
+            const stringInput = document.getElementById('stringInput').value;
+            const wordCount = countWords(stringInput);
+            document.getElementById('result').innerText = `Word Count: ${wordCount}`;
+        }
+    </script>
+</body>
+</html>

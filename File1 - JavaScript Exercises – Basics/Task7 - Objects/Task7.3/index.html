@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3. Write a JavaScript function that receives two objects as parameters and returns a new object that combines the properties of both objects. Use the Object.assign() method to merge the objects.</h1>
+        <div>
+        <label for="objectInput1">Enter Object 1 (as JSON):</label>
+        <input type="text" id="objectInput1" placeholder='{"name": "John", "age": 30}' style="width: 500px;">
+        <br>
+        <label for="objectInput2">Enter Object 2 (as JSON):</label>
+        <input type="text" id="objectInput2" placeholder='{"city": "New York", "country": "USA"}' style="width: 500px;">
+        <br>
+        <button onclick="mergeAndDisplayObjects()">Merge Objects</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function mergeObjects(obj1, obj2) {
+            return Object.assign({}, obj1, obj2);
+        }
+
+        function mergeAndDisplayObjects() {
+            const objectInput1 = document.getElementById('objectInput1').value;
+            const objectInput2 = document.getElementById('objectInput2').value;
+            
+            let obj1, obj2;
+            obj1 = JSON.parse(objectInput1);
+            obj2 = JSON.parse(objectInput2);
+            
+            const mergedObject = mergeObjects(obj1, obj2);
+            document.getElementById('result').innerText = JSON.stringify(mergedObject, null, 2);
+        }
+    </script>
+</body>
+</html>

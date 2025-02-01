@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiply by Length</h1>
+    <div>
+        <label for="arrayInput">Enter Numbers (comma separated):</label>
+        <input type="text" id="arrayInput" placeholder="4, 2, 5" value="4, 2, 5">
+        <button onclick="multiplyByLength()">Multiply</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function MultiplyByLength(array) {
+            const length = array.length;
+            return array.map(element => element * length);
+        }
+
+        function multiplyByLength() {
+            const arrayInput = document.getElementById('arrayInput').value;
+            const numberArray = arrayInput.split(',').map(Number);
+            const resultArray = MultiplyByLength(numberArray);
+            document.getElementById('result').innerText = `Result: ${resultArray}`;
+        }
+    </script>
+</body>
+</html>

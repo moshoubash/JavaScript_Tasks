@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find Largest Number</h1>
+    <div class="form-group">
+        <label for="number1">Enter First Number:</label>
+        <input type="number" id="number1" placeholder="Enter first number">
+    </div>
+    <div class="form-group">
+        <label for="number2">Enter Second Number:</label>
+        <input type="number" id="number2" placeholder="Enter second number">
+    </div>
+    <button onclick="findLargestNumber()">Find Largest</button>
+    <div id="result"></div>
+
+    <script>
+        function findLargestNumber() {
+            const number1 = document.getElementById('number1').value;
+            const number2 = document.getElementById('number2').value;
+            const largest = number1 > number2 ? number1 : number2;
+            document.getElementById('result').innerText = `The largest number is ${largest}.`;
+        }
+    </script>
+</body>
+</html>

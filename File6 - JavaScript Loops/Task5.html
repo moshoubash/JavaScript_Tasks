@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the Largest Number in an Array</h1>
+    <p>array : </p>
+    <p>
+        <mark>let array = [1, 2, 3, 4, 5];</mark>
+    </p>
+    <script>
+        let array = [1, 2, 3, 4, 5];
+        let largest = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > largest) {
+                largest = array[i];
+            }
+        }
+        document.write(`The largest number in the array is ${largest}`);
+    </script>
+</body>
+</html>

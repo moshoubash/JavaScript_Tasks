@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check String Ending</h1>
+    <div>
+        <label for="str1Input">Enter First String:</label>
+        <input type="text" id="str1Input" placeholder="CodingSchool" value="CodingSchool">
+        <br>
+        <label for="str2Input">Enter Second String:</label>
+        <input type="text" id="str2Input" placeholder="Ac" value="Ac">
+        <br>
+        <button onclick="checkStringEnding()">Check Ending</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function checkEnding(str1, str2) {
+            return str1.endsWith(str2);
+        }
+
+        function checkStringEnding() {
+            const str1Input = document.getElementById('str1Input').value;
+            const str2Input = document.getElementById('str2Input').value;
+            const result = checkEnding(str1Input, str2Input);
+            document.getElementById('result').innerText = `${result}`;
+        }
+    </script>
+</body>
+</html>

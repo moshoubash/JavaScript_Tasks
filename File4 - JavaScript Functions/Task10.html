@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Double Each Character in String</h1>
+    <div>
+        <label for="stringInput">Enter a String:</label>
+        <input type="text" id="stringInput" placeholder="Coding" value="Coding">
+        <button onclick="doubleEachChar()">Double Characters</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function doubleChar(str) {
+            let result = '';
+            for (let i = 0; i < str.length; i++) {
+                result += str[i] + str[i];
+            }
+            return result;
+        }
+
+        function doubleEachChar() {
+            const stringInput = document.getElementById('stringInput').value;
+            const doubledString = doubleChar(stringInput);
+            document.getElementById('result').innerText = `Doubled String: ${doubledString}`;
+        }
+    </script>
+</body>
+</html>

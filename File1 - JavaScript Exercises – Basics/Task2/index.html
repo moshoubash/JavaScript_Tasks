@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Type Demonstration</title>
+</head>
+<body>
+    <p><mark>Open the <b>console</b> to see the output.</mark></p>
+    <h2>typeof(100)</h2>
+    <p>Answer: number</p>
+    <p>Justification: 100 is a numeric value, so its type is 'number'.</p>
+
+    <h2>typeof(73.9)</h2>
+    <p>Answer: number</p>
+    <p>Justification: 73.9 is a floating-point number, which is still classified as 'number'.</p>
+
+    <h2>typeof(NaN)</h2>
+    <p>Answer: number</p>
+    <p>Justification: NaN (Not a Number) is still considered a type of number in JavaScript.</p>
+
+    <h2>typeof("Water")</h2>
+    <p>Answer: string</p>
+    <p>Justification: "Water" is enclosed in quotes, making it a string.</p>
+
+    <h2>typeof(false)</h2>
+    <p>Answer: boolean</p>
+    <p>Justification: false is a boolean value.</p>
+
+    <h2>typeof(9 != 11)</h2>
+    <p>Answer: boolean</p>
+    <p>Justification: 9 != 11 evaluates to true, which is a boolean.</p>
+
+    <h2>"Orang" + "e"</h2>
+    <p>Answer: "Orange"</p>
+    <p>Justification: String concatenation occurs when using the + operator with strings.</p>
+
+    <h2>"Orange" - "s"</h2>
+    <p>Answer: NaN</p>
+    <p>Justification: Subtraction is not defined for strings.</p>
+
+    <h2>"4" + "8"</h2>
+    <p>Answer: "48"</p>
+    <p>Justification: Both are strings, so concatenation happens instead of addition.</p>
+
+    <h2>"4" - "8"</h2>
+    <p>Answer: -4</p>
+    <p>Justification: JavaScript converts both strings to numbers and performs subtraction.</p>
+
+    <h2>"name" + 3</h2>
+    <p>Answer: "name3"</p>
+    <p>Justification: The number 3 is converted to a string and concatenated.</p>
+
+    <h2>"name" - 3</h2>
+    <p>Answer: NaN</p>
+    <p>Justification: Subtraction is not defined for a string and a number.</p>
+
+    <h2>82 * "word"</h2>
+    <p>Answer: NaN</p>
+    <p>Justification: "word" cannot be converted to a number, resulting in NaN.</p>
+
+    <h2>1 + "hello"</h2>
+    <p>Answer: "1hello"</p>
+    <p>Justification: The number 1 is converted to a string and concatenated.</p>
+
+    <h2>"hello" + 1</h2>
+    <p>Answer: "hello1"</p>
+    <p>Justification: The number 1 is converted to a string and concatenated.</p>
+
+    <h2>1 + true</h2>
+    <p>Answer: 2</p>
+    <p>Justification: true is converted to 1, so 1 + 1 = 2.</p>
+
+    <h2>"hello" + true</h2>
+    <p>Answer: "hellotrue"</p>
+    <p>Justification: true is converted to a string and concatenated.</p>
+
+    <h2>typeof (Infinity)</h2>
+    <p>Answer: number</p>
+    <p>Justification: Infinity is a special numeric value.</p>
+
+    <h2>1 == '1'</h2>
+    <p>Answer: true</p>
+    <p>Justification: Loose equality allows type coercion, converting '1' to a number.</p>
+
+    <h2>1 === '1'</h2>
+    <p>Answer: false</p>
+    <p>Justification: Strict equality checks type as well, and number !== string.</p>
+
+    <script>
+        console.log(`typeof(100) :%c ${typeof(100)}`,"color:red; font-weight:bold;");
+        console.log(`typeof(73.9) :%c ${typeof(73.9)}`,"color:red; font-weight:bold;");
+        console.log(`typeof(NaN) :%c ${typeof(NaN)}`,"color:red; font-weight:bold;");
+        console.log(`typeof("Water") :%c ${typeof("Water")}`,"color:red; font-weight:bold;");
+        console.log(`typeof(false) :%c ${typeof(false)}`,"color:red; font-weight:bold;");
+        console.log(`typeof(9 != 11) :%c ${typeof(9 != 11)}`,"color:red; font-weight:bold;");
+        console.log(`console.log("Orang" + "e") :%c ${"Orang" + "e"}`,"color:red; font-weight:bold;");
+        console.log(`console.log("Orange" - "s") :%c ${"Orange" - "s"}`,"color:red; font-weight:bold;");
+        console.log(`console.log("4" + "8") :%c ${"4" + "8"}`,"color:red; font-weight:bold;");
+        console.log(`console.log("4" - "8") :%c ${"4" - "8"}`,"color:red; font-weight:bold;");
+        console.log(`console.log("name" + 3) :%c ${"name" + 3}`,"color:red; font-weight:bold;");
+        console.log(`console.log("name" - 3) :%c ${"name" - 3 }`,"color:red; font-weight:bold;");
+        console.log(`console.log(82 * "word") :%c ${82 * "word"}`,"color:red; font-weight:bold;");
+        console.log(`console.log(1 + "hello") :%c ${1 + "hello"}`,"color:red; font-weight:bold;");
+        console.log(`console.log("hello" + 1) :%c ${"hello" + 1}`,"color:red; font-weight:bold;");
+        console.log(`console.log(1 + true) :%c ${1 + true}`,"color:red; font-weight:bold;");
+        console.log(`console.log("hello" + true) :%c ${"hello" + true}`,"color:red; font-weight:bold;");
+        console.log(`console.log(typeof (Infinity)) :%c ${typeof (Infinity)}`,"color:red; font-weight:bold;");
+        console.log(`console.log(1 == '1') :%c ${1 == '1'}`,"color:red; font-weight:bold;");
+        console.log(`console.log(1 === '1') :%c ${1 === '1'}`,"color:red; font-weight:bold;");
+    </script>
+</body>
+</html>

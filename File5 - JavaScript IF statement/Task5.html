@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Positive Number Check</h1>
+    <form>
+        <label for="Input">Enter a number:</label>
+        <input type="number" id="Input" name="Input">
+        <button type="button" onclick="checkPositiveNumber()">Check</button>
+    </form>
+    <p id="positiveMessage"></p>
+    <script>
+        function checkPositiveNumber() {
+            let x = document.getElementById("Input").value;
+            let message = x > 0 ? `${x} is a positive number` : `${x} is not a positive number`;
+            document.getElementById("positiveMessage").innerText = message;
+        }
+    </script>
+</body>
+</html>

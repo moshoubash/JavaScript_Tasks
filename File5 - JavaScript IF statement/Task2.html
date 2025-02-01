@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Even Number Check</h1>
+    <form>
+        <label for="numInput">Enter a number:</label>
+        <input type="number" id="numInput" name="numInput">
+        <button type="button" onclick="checkEvenNumber()">Check</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function checkEvenNumber() {
+            let num = document.getElementById("numInput").value;
+            let message = (num % 2 === 0) ? "The number is even" : "The number is not even";
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Your Eligibility</h1>
+    <div class="form-group">
+        <label for="yearOfBirth">Year of Birth:</label>
+        <input type="number" id="yearOfBirth" placeholder="Enter your year of birth">
+    </div>
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <div id="result"></div>
+
+    <script>
+        function checkEligibility() {
+            const yearOfBirth = document.getElementById('yearOfBirth').value;
+            const currentYear = new Date().getFullYear();
+            const age = currentYear - yearOfBirth;
+            let message = "";
+
+            if (age > 60) {
+                message = "You may join the seniors program.";
+            } else if (age > 30) {
+                message = "You are not eligible. You may join other programs.";
+            } else if (age >= 18) {
+                message = "You are eligible. Start your application.";
+            } else {
+                message = "You may join the kids' program.";
+            }
+
+            document.getElementById('result').innerText = message;
+        }
+    </script>
+</body>
+</html>

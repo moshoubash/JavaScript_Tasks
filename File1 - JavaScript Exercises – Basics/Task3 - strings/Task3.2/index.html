@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input, button{
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="word" placeholder="enter the word">
+    <button onclick="fn()">Submit</button>
+    <br>
+    <p>Result :</p>
+    <p id="result"></p>
+    
+    <script>
+        let word = document.getElementById("word");
+        let result = document.getElementById("result");
+        
+        function fn() {
+            result.innerHTML = `${word.value[0]}${word.value.slice(1).replaceAll(word.value[0], '*')}`;
+        };
+    </script>
+</body>
+</html>

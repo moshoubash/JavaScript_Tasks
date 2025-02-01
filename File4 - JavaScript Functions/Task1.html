@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find Smallest Value in Array</h1>
+    <div>
+        <label for="arrayInput">Enter Numbers (comma separated):</label>
+        <input type="text" id="arrayInput" placeholder="5, 2, 9, 1, 7">
+        <button onclick="findAndDisplaySmallestValue()">Find Smallest Value</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function findSmallestValue(array) {
+            let smallestValue = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] < smallestValue) {
+                    smallestValue = array[i];
+                }
+            }
+            return smallestValue;
+        }
+
+        function findAndDisplaySmallestValue() {
+            const arrayInput = document.getElementById('arrayInput').value;
+            const numberArray = arrayInput.split(',').map(Number);
+            const smallestValue = findSmallestValue(numberArray);
+            document.getElementById('result').innerText = `Smallest Value: ${smallestValue}`;
+        }
+    </script>
+</body>
+</html>

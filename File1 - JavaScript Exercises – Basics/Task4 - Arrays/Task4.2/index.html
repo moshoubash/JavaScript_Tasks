@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Operations</title>
+</head>
+<body>
+    <p><mark>Open the console to see the result</mark></p>
+
+    <!-- a. Remove the last item from the vegetable array. -->
+    <h2>a. Remove the last item from the vegetable array.</h2>
+    <p><b>Before</b> : var vegetables = ["carrot", "tomato", "pepper", "lettuce"];</p>
+    <p><b>After</b> : </p>
+    <p id="resultA"></p>
+
+    <!-- b. Remove the first item from the fruit array. -->
+    <h2>b. Remove the first item from the fruit array.</h2>
+    <p><b>Before</b> : var fruit = ["banana", "apple", "orange", "watermelon"];</p>
+    <p><b>After</b> : </p>
+    <p id="resultB"></p>
+
+    <!-- c. Find the index of "orange." -->
+    <h2>c. Find the index of "orange."</h2>
+    <p id="resultC"></p>
+
+    <!-- d. Add that number to the end of the fruit array. -->
+    <h2>d. Add that number to the end of the fruit array.</h2>
+    <p id="resultD"></p>
+
+    <!-- e. Find the length of the vegetable array. -->
+    <h2>e. Find the length of the vegetable array.</h2>
+    <p id="resultE"></p>
+
+    <!-- f. Add that number to the end of the vegetable array. -->
+    <h2>f. Add that number to the end of the vegetable array.</h2>
+    <p id="resultF"></p>
+
+    <!-- g. Put the two arrays together into one array. Fruit first. Call the new Array "food". -->
+    <h2>g. Merge the two arrays into "food".</h2>
+    <p id="resultG"></p>
+
+    <!-- h. Remove 2 elements from "food" starting at index 4. -->
+    <h2>h. Remove 2 elements from "food" starting at index 4.</h2>
+    <p id="resultH"></p>
+
+    <!-- i. Reverse the array. -->
+    <h2>i. Reverse the array.</h2>
+    <p id="resultI"></p>
+
+    <!-- j. Turn the array into a string. -->
+    <h2>j. Convert the array to a string.</h2>
+    <p id="resultJ"></p>
+
+    <script>
+        var fruit = ["banana", "apple", "orange", "watermelon"];
+        var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
+
+        // a. Remove the last item from the vegetable array.
+        vegetables.pop();
+        document.getElementById("resultA").innerHTML = vegetables;
+        console.log(vegetables);
+
+        // b. Remove the first item from the fruit array.
+        fruit.shift();
+        document.getElementById("resultB").innerHTML = fruit;
+        console.log(fruit);
+
+        // c. Find the index of "orange."
+        var orangeIndex = fruit.indexOf("orange");
+        document.getElementById("resultC").innerHTML = orangeIndex;
+        console.log(orangeIndex);
+
+        // d. Add that number to the end of the fruit array.
+        fruit.push(orangeIndex);
+        document.getElementById("resultD").innerHTML = fruit;
+        console.log(fruit);
+
+        // e. Find the length of the vegetable array.
+        var vegLength = vegetables.length;
+        document.getElementById("resultE").innerHTML = vegLength;
+        console.log(vegLength);
+
+        // f. Add that number to the end of the vegetable array.
+        vegetables.push(vegLength);
+        document.getElementById("resultF").innerHTML = vegetables;
+        console.log(vegetables);
+
+        // g. Put the two arrays together into one array. Fruit first. Call it "food".
+        var food = fruit.concat(vegetables);
+        document.getElementById("resultG").innerHTML = food;
+        console.log(food);
+
+        // h. Remove 2 elements from "food" starting at index 4.
+        food.splice(4, 2);
+        document.getElementById("resultH").innerHTML = food;
+        console.log(food);
+
+        // i. Reverse the array.
+        food.reverse();
+        document.getElementById("resultI").innerHTML = food;
+        console.log(food);
+
+        // j. Turn the array into a string.
+        var foodString = food.join(", ");
+        document.getElementById("resultJ").innerHTML = foodString;
+        console.log(foodString);
+    </script>
+</body>
+</html>
