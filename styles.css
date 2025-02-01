@@ -54,7 +54,6 @@ hr{
 
 ::-webkit-scrollbar-track {
     background: rgb(21, 21, 72);
-    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
