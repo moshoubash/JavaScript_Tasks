@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        body{
+            height: 100vh;
+            background-color: rgb(11, 11, 64);
+            padding: 70px 100px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .welcome{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        p{
+            margin-left: 50px;
+        }
+        ul{
+            padding-left: 50px;
+            margin: 10px;
+        }
+        button#edit-btn{
+            margin: 20px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: rgb(11, 11, 64);
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: white;
+            color: rgb(11, 11, 64);
+        }
+        button#logout{
+            background-color: red;
+        }
+        button#logout:hover{
+            background-color: white;
+            color: red;
+        }
+        input{
+            padding: 10px;
+            margin: 12px 0;
+            color: black;
+        }
+
+        #form{
+            display: none;
+        }
+
+        #success-message{
+            padding: 10px 20px;
+            background-color: rgb(19, 137, 19);
+            color: white;
+            border-radius: 20px;
+            position: absolute;
+            bottom: 50px;
+            font-weight: bold;
+            transition: .5s;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Profile Page</h1>
+        <hr style="margin: 10px 0;">
+        <h2 class="welcome">Welcome <span id="username-data"></span>!</h2>
+        <p>Your data :</p>
+        <ul>
+            <li>Username : <span id="list-data-one"></span></li>
+            <li>Password : <span id="list-data-two"></span></li>
+        </ul>
+        <button id="edit-btn">Edit</button>
+        <button id="logout">Logout</button>
+    </main>
+
+
+    <form id="form">
+        <h2>Edit Form</h2>
+        <hr style="margin: 10px 0 20px 0;">
+        <label for="username">Username :</label><br>
+        <input type="text" id="form-username" required><br>
+        <label for="password">Password :</label><br>
+        <input type="password" id="form-password" required><br>
+        <label for="confirm-password">Confirm Password :</label><br>
+        <input type="password" id="form-confirm-password" required><br>
+        <button id="form-edit">Edit</button>
+    </form>
+    <div id="success-message">Data Edited Successfully!</div>
+    <script>
+        let userData = JSON.parse(localStorage.getItem('user'));
+        let username = document.getElementById("username-data");
+        username.innerText = userData.username;
+
+        let listDataOne = document.getElementById("list-data-one");
+        listDataOne.innerText = userData.username;
+        let listDataTwo = document.getElementById("list-data-two");
+        listDataTwo.innerText = userData.password;
+
+        let logout = document.getElementById("logout");
+        logout.addEventListener("click", function(){
+            window.location.href = "login.html";
+        });
+
+        let form_username = document.getElementById("form-username");
+        let form_password = document.getElementById("form-password");
+        let form_confirm_password = document.getElementById("form-confirm-password");
+        let edit_btn = document.getElementById("edit-btn");
+
+        
+        edit_btn.addEventListener("click", function() {
+            document.getElementById("form").style.display = "block";
+            form_username.value = userData.username;
+            form_password.value = userData.password;
+            form_confirm_password.value = userData.password;
+        });
+
+        let submit_edit = document.getElementById("form-edit");
+        submit_edit.addEventListener("click", function(event){
+            event.preventDefault();
+            if(form_password.value === form_confirm_password.value){
+                userData.username = form_username.value;
+                userData.password = form_password.value;
+                localStorage.setItem('user', JSON.stringify(userData));
+                window.location.href = "profile.html";
+                alert("Data Edited Successfully!");
+            }
+            else{
+                alert("Password and Confirm Password should be same");
+            }
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(11, 11, 64);
+}
+
+form{
+    background-color: rgb(224, 224, 224);
+    height: 500px;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    opacity: 90%;
+    transition: .5s;
+}
+
+form:hover{
+    box-shadow: 0 0 10px 5px rgb(113, 113, 113);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+input{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+button{
+    padding: 10px 30px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    background-color: rgb(11, 11, 64);
+    color: white;
+}
+
+button:hover{
+    background-color: transparent;
+    border-color: rgb(11, 11, 64);
+    color: rgb(11, 11, 64);
+}
+
+#success-message{
+    background-color: rgb(31, 110, 31);
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: .5s;
+    display: none;
+}
+
+#error-message{
+    background-color: rgb(208, 9, 9);
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    transition: .5s;
+    display: none;
+}

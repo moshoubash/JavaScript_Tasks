@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form id="form">
+            <h1>Login</h1>
+            <label for="username">
+                Username :
+            </label><br>
+            <input type="text" id="username" required><br>
+            <label for="password">
+                Password :
+            </label><br>
+            <input type="password" id="password" required><br>
+            <button id="submit-btn">Submit</button>
+            <br>
+            <p>or</p>
+            <a href="index.html">Register</a>
+        </form>
+    </main>
+    <div id="success-message">Your data Submitted successfully</div>
+    <div id="error-message">an error occur</div>
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let submit = document.getElementById("submit-btn");
+        let success_message = document.getElementById("success-message");
+        let error_message = document.getElementById("error-message");
+
+        let localData = JSON.parse(localStorage.getItem("user"));
+
+        submit.addEventListener("click", function(event){
+            event.preventDefault();
+            if(username.value === localData.username && password.value === localData.password){
+                setTimeout(() => {
+                    success_message.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        success_message.style.display = 'none';
+                    }, 3000);
+                }, 1000);
+
+                setTimeout(() => {
+                    window.location.href = "profile.html";
+                }, 1000);
+            }
+            else{
+                setTimeout(() => {
+                    error_message.style.display = 'block';
+                    setTimeout(() => {
+                        error_message.style.display = 'none';
+                    }, 3000);
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
